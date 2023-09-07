@@ -1,0 +1,46 @@
+html .air-datepicker {
+	--adp-font-family: "Open Sans", sans-serif;
+	--adp-font-size: 16px;
+	--adp-width: 300px;
+	--adp-padding: 5px;
+	--adp-background-color: var(--bg-secondary);
+	--adp-background-color-hover: var(--primary);
+	--adp-background-color-active: var(--primary);
+	--adp-background-color-selected-other-month-focused: var(--primary);
+	--adp-background-color-selected-other-month: var(--primary);
+	--adp-color: var(--accent);
+	--adp-color-secondary: var(--text-primary);
+	--adp-accent-color: var(--primary);
+	--adp-color-current-date: var(--primary);
+	--adp-color-other-month: #dedede;
+	--adp-color-other-month-hover: var(--text-primary);
+	--adp-border-color: #dbdbdb;
+	--adp-border-color-inner: #efefef;
+	--adp-border-color-inline: #d7d7d7;
+	--adp-nav-arrow-color: var(--adp-color-secondary);
+	--adp-nav-color-secondary: var(--text-primary);
+	--adp-day-name-color: var(--primary);
+	--adp-day-name-color-hover: var(--primary);
+	--adp-cell-background-color-hover: var(--text-primary);
+	--adp-cell-background-color-selected: var(--primary);
+	--adp-cell-background-color-selected-hover: var(--primary);
+  }
+
+  .input-arrow {
+	position: relative;
+	&::before {
+	  position: absolute;
+	  content: url("@img/icon/u_angle-left-b.svg");
+	  top: 18px;
+	  right: 12px;
+	  width: 24px;
+	  height: 24px;
+	  transition: all 0.2s ease;
+	}
+	&__open {
+	  &::before {
+		transform: rotate(-180deg);
+	  }
+	}
+  }
+  

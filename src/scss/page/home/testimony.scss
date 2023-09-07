@@ -1,0 +1,136 @@
+.testimony {
+
+    &__container {
+        position: relative;
+        @include adaptiveValue("padding-top", 152, 110);
+        @include adaptiveValue("padding-bottom",125 , 60);
+    }
+
+    &__logo {
+        position: absolute;
+        content:'';
+        top: rem(-60);
+        right:1%;
+        width: rem(146);
+        height: rem(146);
+        z-index: 3;
+    }
+
+    &__title-box {
+        text-align: center;
+        margin: rem(0) rem(0) rem(64) rem(0);
+    }
+
+    &__sub-title {
+        @extend %spoon;
+    }
+
+    &__customers {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: rem(32);
+        row-gap: rem(64);
+    }
+}
+
+.customer {
+    display: flex;
+    height: 100%;
+
+    &__img-ibg {
+        flex: 1 0 rem(206);
+        height: rem(210);
+        @include adaptiveValue("flex-basis", 206, 150,0,900,780);
+
+        &::after{
+            position: absolute;
+            content:url("@img/icon/bq.svg");
+            bottom:  0;
+            right: 0;
+            width: rem(47);
+            height: rem(40);
+        }
+        & img{
+            padding: rem(0) rem(20) rem(20) rem(0);
+        }
+    }
+
+    &__info {
+        padding: rem(18) rem(0) rem(18) rem(18);
+        @include adaptiveValue("padding-top", 18,0,0,1300,900);
+        @include adaptiveValue("padding-bottom", 18,0,0,1300,900 );
+        text-align: start;
+    }
+
+    &__text {
+        margin: rem(0) rem(0) rem(16) rem(0);
+        font-style: italic;
+    }
+
+    &__name {
+        margin: rem(0) rem(0) rem(5) rem(0);
+    }
+
+    &__position {
+    }
+}
+
+ @media (max-width: $mobile) {
+    .testimony {
+    
+        &__customers {
+            display: flex;  
+            flex-direction: column;
+            column-gap: rem(32);
+            row-gap: rem(64);
+        }
+    }
+
+    .customer {
+        &__img-ibg {
+            flex: 1 0 rem(206);
+        }
+    
+    }
+ }
+
+  @media (max-width: $mobileSmall) {
+    .customer {
+        flex-direction: column;
+    
+        &__img-ibg {    
+            padding-bottom: rem(400);
+    
+            &::after{
+                position: absolute;
+                content:url("@img/icon/bq.svg");
+                bottom:  0;
+                right: 0;
+                width: rem(47);
+                height: rem(40);
+            }
+            & img{
+                padding: rem(18);
+            }
+        }
+    
+        &__info {
+            padding: rem(18) rem(0) rem(18) rem(18);
+            @include adaptiveValue("padding-top", 18,0,0,1300,900);
+            @include adaptiveValue("padding-bottom", 18,0,0,1300,900 );
+            text-align: start;
+        }
+    
+        &__text {
+            margin: rem(0) rem(0) rem(16) rem(0);
+            font-style: italic;
+        }
+    
+        &__name {
+            margin: rem(0) rem(0) rem(5) rem(0);
+        }
+    
+        &__position {
+        }
+    }
+  }

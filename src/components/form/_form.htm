@@ -1,0 +1,78 @@
+<!-- data-form -- обозначет начало скрипта для формы -->
+<!-- data-validation-element="name" -- указывает что элемент будет валедироваться и по какому выражению  -->
+<!-- <div class="input-info">ошибка</div>  --- добавить если надо выводить текст ошибки -->
+<!-- input --- любой инпут что бы просто следить за его состоянием -->
+
+<form class="form" data-form action="#">
+
+    <div data-validation-element="name">
+        <div class="required">
+            <input class="input" type="text" placeholder="name" name="form[name]" autocomplete="on" required>
+        </div>
+        <div class="input-info">ошибка</div>
+    </div>
+
+    <div data-validation-element="email">
+        <div class="required">
+            <input class="input" type="text" placeholder="email" name="form[email]" autocomplete="on" required>
+        </div>
+        <div class="input-info">ошибка</div>
+    </div>
+
+    <div data-validation-element="password">
+        <div class="required">
+            <input class="input" type="text" placeholder="password" name="form[password]" autocomplete="on" required>
+        </div>
+        <div class="input-info">ошибка</div>
+       
+    </div>
+ 
+    <div data-validation-element="confirmPassword">
+        <div class="required">
+            <input class="input" type="text" placeholder="confirmPassword" name="form[confirmPassword]" autocomplete="on" required>
+        </div>
+        <div class="input-info">ошибка</div>
+    </div>
+
+    <div data-validation-element="phon">
+        <div class="required">
+            <input class="input" type="text" placeholder="phon" name="form[phon]" autocomplete="on">
+        </div>
+        <div class="input-info">ошибка</div>
+    </div>
+
+    <div class="options" data-validation-element="radio">
+        <div class="options__item">
+            <input hidden id="o_1" class="options__input"  type="radio" value="1" name="option">
+            <label for="o_1" class="options__label ">
+                <span class="options__text">Текст</span>
+            </label>
+        </div>
+        <div class="options__item">
+            <input hidden id="o_2" class="options__input input" type="radio" value="2" name="option">
+            <label for="o_2" class="options__label">
+                <span class="options__text">Текст</span>
+            </label>
+        </div>
+        <div class="input-info">ошибка rdio</div>
+    </div>
+    
+    <div data-validation-element="checkbox">
+    <div class="checkbox" >
+        <input id="c_1" data-error="Помилка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+        <label for="c_1" class="checkbox__label"><span class="checkbox__text">Текст</span></label>
+    </div>
+    <div class="checkbox">
+        <input id="c_2" data-error="Помилка" class="checkbox__input" type="checkbox" value="2" name="form[]">
+        <label for="c_2" class="checkbox__label"><span class="checkbox__text">Текст2</span></label>
+    </div>
+    <div class="checkbox">
+        <input id="c_3" data-error="Помилка" class="checkbox__input" type="checkbox" value="3" name="form[]">
+        <label for="c_3" class="checkbox__label"><span class="checkbox__text">Текст3</span></label>
+    </div>
+    <div class="input-info">ошибка checkbox</div>
+    </div>
+
+    <button class="button" type="submit">seend</button>
+ 
+</form>

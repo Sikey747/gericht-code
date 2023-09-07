@@ -1,0 +1,41 @@
+<!-- https://legosite.kz/ts/fls/ -->
+
+<!-- спойлер -->
+<div data-spollers class="spollers">
+  <details class="spollers__item">
+    <summary class="spollers__title">Заголовок спойлера</summary>
+    <div class="spollers__body">Контент спойлера</div>
+  </details>
+</div>
+
+
+<!-- добавить если надо что бы сполер скрывался иил раскрывался ан определенном разрешение экрана -->
+<!-- max (по умолчанию) — функционал включится на ширине меньшей чем указанная
+min — функционал включится на ширине большей чем указанная -->
+<div data-spollers="768,min" class="spollers">
+</div>
+
+<!-- акордион -->
+<div data-spollers data-one-spoller class="spollers">
+  <details class="spollers__item">
+    <summary class="spollers__title">Заголовок спойлера1</summary>
+    <div class="spollers__body">Контент спойлера1</div>
+  </details>
+  <details class="spollers__item">
+    <summary class="spollers__title">Заголовок спойлера2</summary>
+    <div class="spollers__body">Контент спойлера2</div>
+  </details>
+</div>
+
+<!-- если надо управлять скоростью открытия закрытия -->
+<div data-spollers data-spollers-speed="1000" class="spollers">
+</div>
+
+<!-- Закрытие при клике вне спойлера -->
+<!-- Если необходимо закрывать спойлер(ы) при клике вне блока («на пустом месте»), то следует добавить нужному заголовку(кам) атрибут data-spoller-close -->
+<div data-spollers class="spollers">
+	<div class="spollers__item">
+		<button type="button" data-spoller data-spoller-close class="spollers__title">Заголовок спойлера</button>
+		<div class="spollers__body">Контент спойлера</div>
+	</div>
+</div>

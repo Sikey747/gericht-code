@@ -1,0 +1,125 @@
+.chef-word {
+  background: url("@img/bg/bg2.jpg") center/cover no-repeat;
+  position: relative;
+  z-index: 2;
+
+  &__container {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    // gap: rem(15);
+    @include adaptiveValue("gap", 15, 30);
+    @include adaptiveValue("padding-top", 128, 64);
+    @include adaptiveValue("padding-bottom", 128, 80);
+  }
+
+  &__img-ibg {
+    padding-bottom: 79.08%;
+    position: relative;
+    margin: rem(24) rem(24) rem(24) rem(24);
+    &::after {
+      position: absolute;
+      content: "";
+      top: rem(-25);
+      right: rem(-25);
+      width: 70.27%;
+      height: 63.22%;
+      background: var(--primary);
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: rem(-25);
+      left: rem(-25);
+      width: 70.27%;
+      height: 63.22%;
+      background: var(--primary);
+    }
+
+    & img {
+      z-index: 5;
+    }
+  }
+
+  &__info {
+    // padding: rem(87) 0;
+    @include adaptiveValue("padding-top", 87, 15);
+    @include adaptiveValue("padding-bottom", 87,15 );
+    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(64);
+    max-width: rem(570);
+  
+  }
+
+  &__title-box {
+  }
+
+  &__sub-title {
+    @extend %spoon;
+    align-items:start;
+  }
+
+  &__title {
+  }
+
+  &__blockquote {
+  }
+
+  &__person-box {
+  }
+
+  &__name {
+    margin: rem(0) rem(0) rem(8) rem(0);
+  }
+
+  &__position {
+  }
+
+  &__signature {
+    @extend %f3;
+    font-size: rem(64);
+    line-height: 130%;
+    letter-spacing: 2.56px;
+  }
+}
+
+
+ @media (max-width: $mobile) {
+    .chef-word {
+    
+        &__container {
+        display: flex;
+        flex-direction: column-reverse;
+        }
+      
+        &__img-ibg {
+          padding-bottom: 79.08%;
+          &::after {
+            top: rem(-15);
+            right: rem(-15);
+          }
+          &::before {
+            bottom: rem(-15);
+            left: rem(-15);
+          }
+        }
+      
+        &__info {
+          margin: 0 0 0 0;
+          align-items:center;
+          max-width: 100%;
+        
+        }
+
+        &__sub-title {
+          align-items:center;
+        }
+      
+        &__title {
+           text-align: center;
+        }
+      }
+ }

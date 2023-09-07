@@ -1,0 +1,63 @@
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: rem(250); /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: rem(10); /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 100; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+  &__close{
+    position: absolute;
+    content:'';
+    top: 50%;
+    right: rem(10);
+    width: rem(25);
+    height: rem(25);
+    transform: translateY(-50%);
+  }
+}
+
+.snackbar.show {
+  visibility: visible; 
+
+  animation:
+      fadein 0.5s,
+      fadeout 0.5s 3.5s;//ставь на 0,5 секунд меньше что бі правельно сработала анимация
+}
+
+
+@keyframes fadein {
+  from {
+      bottom: 0;
+      opacity: 0;
+  }
+  to {
+      bottom: 30px;
+      opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+      bottom: 30px;
+      opacity: 1;
+  }
+  to {
+      bottom: 0;
+      opacity: 0;
+  }
+}
+
+[data-snackbar-info="OK"] {
+  background: green;
+}
+
+[data-snackbar-info="BAD"] {
+  background: red;
+}

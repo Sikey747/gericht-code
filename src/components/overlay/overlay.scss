@@ -1,0 +1,26 @@
+.overlay-container {
+  display: none;
+  position: fixed;
+  z-index: 18;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  .overlay-backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 18;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    opacity: 0;
+    background-color: #00000080;
+  }
+  .overlay-backdrop,.overlay-backdrop-showing {
+    opacity: 1;
+  }
+}

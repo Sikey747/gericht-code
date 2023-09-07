@@ -1,0 +1,232 @@
+//меню при наведении
+.drop-down {
+  position: relative;
+
+  &__butten {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    background-color: wheat;
+    padding: rem(10);
+    cursor: pointer;
+
+    svg {
+      height: 100%;
+      height: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    content: "";
+    top: 105%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    border: 1px solid white;
+    background-color: wheat;
+    padding: rem(15);
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: all 0.2s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &:hover &__content {
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover svg {
+    transform: rotate(-180deg);
+  }
+}
+
+//Меню по нажатию кнопки
+.drop-down-menu {
+  position: relative;
+
+  &__butten {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: rem(5);
+    background-color: wheat;
+    padding: rem(10);
+    cursor: pointer;
+
+    svg {
+      height: 100%;
+      height: 100%;
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    content: "";
+    top: 105%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: rem(20);
+    border: 1px solid white;
+    background-color: wheat;
+    padding: rem(15);
+    transform-origin: 0 0;
+    transform: rotateX(-90deg);
+    transition: all 0.2s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &_open {
+    svg {
+      transform: rotate(-180deg);
+    }
+    .drop-down__content {
+      transform: rotateX(0deg);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+///многоуровневое меню
+.navigation {
+  background-color: rgb(104, 104, 104);
+
+  &__items {
+  }
+
+  &__item {
+    position: relative;
+    border: 1px solid green;
+  }
+
+  &__icon {
+    transition: all 0.2s ease-in-out;
+    path {
+      fill: black;
+    }
+  }
+
+  &__link-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+  }
+  
+  &__link {
+    display: inline-block;
+    padding: rem(13);
+    gap: rem(5);
+    
+  }
+}
+
+//1 уровень меню видемій сразу
+.topmenu {
+  display: flex;
+  gap: rem(15);
+}
+//2 уровень меню
+.submenu {
+  position: absolute;
+  min-width: 200px;
+  z-index: 4;
+  top: 100%;
+  left: 0;
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  transition: all 0.2s linear;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgb(127, 123, 167);
+
+}
+//3 уровень меню если надо 4 нажо ещё добавлять submenu 
+.submenu .submenu {
+  top: 0;
+  left: 100%;
+  background-color: rgb(167, 123, 123);
+}
+
+
+
+//выше мобилое работает по ховеру (можно поменять занчение на планшеты)
+ @media (min-width: $mobile) {
+
+
+.topmenu li:hover > .submenu {
+  transform: rotateX(0deg);
+  visibility: visible;
+  opacity: 1;
+}
+
+.topmenu li:hover .navigation__icon_top-menu {
+  transform: rotate(-180deg);
+}
+
+.submenu li:hover .navigation__icon_sub-menu {
+  transform: rotate(-90deg);
+}
+}
+//мобилое работает по клику (можно поменять занчение на планшеты)
+ @media (max-width: $mobile) {
+  .topmenu {
+    display: block;
+  }
+
+  .submenu {
+    position: relative;
+    min-width: auto;
+    top: 0;
+    left: 0;
+    height: 0;
+  }
+  
+  .submenu .submenu  {
+    height: 0;
+    top: 0;
+    left: 0;
+  }
+
+  // .topmenu li:hover > .submenu {
+  //   transition: all 0.2s ease-in-out;
+  //   height: 100%; 
+  //   transform: rotateX(0deg);
+  //   visibility: visible;
+  //   opacity: 1;  
+  // }
+
+  // .topmenu li:hover .navigation__icon_top-menu {
+  //   transform: rotate(-180deg);
+  // }
+  
+  // .submenu li:hover .navigation__icon_sub-menu {
+  //   transform: rotate(-180deg);
+  // }
+ }
+
+
+  .navigation__icon_active{
+    transform: rotate(-180deg);
+   }
+  
+    .submenu_open{
+    transition: all 0.2s ease-in-out;
+    height: 100% !important; 
+    transform: rotateX(0deg);
+    visibility: visible;
+    opacity: 1;  
+   }

@@ -1,0 +1,26 @@
+// https://ux-select.com/
+
+[class*="__select"] {
+  --uxs-padding-x: 16px;
+  --uxs-padding-y: 16px;
+  --uxs-background-color: var(--bg-secondary);
+  --uxs-text-color: var(--text-primary);
+  --uxs-font-size: 16px;
+  --uxs-line-height: 1;
+  --uxs-border-width: 1px;
+  --uxs-border-radius: 0;
+  --uxs-border-color: var(--secondary);
+  --uxs-border-hover-color: var(--primary);
+  --uxs-option-hover-bg-color: var(--secondary);
+  --uxs-option-select-bg-color: var(--bg-secondary);
+  --uxs-dropdown-image: url("@img/icon/u_angle-left-b.svg");
+  // --uxs-clear-image:"";
+  --uxs-transition-duration: 0.2s;
+  --uxs-transition-easing: ease-in-out;
+  --uxs-scrollbar-thumb-color:var(--primary);
+}
+
+//если не нужен крестик для очистки
+.ux-select.-filled .ux-select__clear {
+  display: none !important;
+}

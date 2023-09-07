@@ -1,0 +1,89 @@
+.book {
+  position: relative;
+  @include adaptiveValue("padding-top",155,100 );
+  @include adaptiveValue("padding-bottom", 155, 100);
+  z-index: 2;
+
+  &__container-width {
+    position: relative;
+  }
+
+  &__logo2 {
+    position: absolute;
+    content: "";
+    top: -40%;
+    right: 30px;
+    width: rem(146);
+    height: rem(146);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: rem(48) rem(32);
+    border: 1px solid rgba(220, 202, 135, 0.2);
+    background: var(--bg-secondary);
+    box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.7);
+    margin: 0 auto;
+    max-width: rem(1300);
+  }
+
+  &__text-block{
+    text-align: center;
+    margin: rem(0) rem(0) rem(64) rem(0);
+  }
+
+  &__sub-title {
+    @extend %spoon;
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+  }
+
+  &__select-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(32);
+    margin: rem(0) rem(0) rem(64) rem(0);
+    width: 100%;
+  }
+
+  &__select {
+  }
+
+  &__calendar {
+    input {
+      width: 100%;
+    }
+  }
+
+  &__time {
+
+  }
+
+
+}
+
+//========================================================================================================================================================
+@media (max-width: $mobile) {
+  .book {
+    &__select-block {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__logo2 {
+      top:rem(-165);
+      right:50%;
+      transform: translateX(50%);
+  }
+  //   &__button {
+  //     width: 100%;
+  // }
+  }
+  
+}

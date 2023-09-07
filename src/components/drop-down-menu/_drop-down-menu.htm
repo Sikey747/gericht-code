@@ -1,0 +1,139 @@
+<!-- // drop down menu
+// https://www.youtube.com/watch?v=cyJ3r3e69zE -->
+
+<!-- дроп даун меню сразу 3х видов  -->
+
+<!-- 1. Срабатывает по ховеру  -->
+<div class="drop-down">
+  <button class="drop-down__butten" type="button">
+    Menu
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <g>
+        <path
+          d="M12.5762 15.4881L18.009 9.56604C18.3971 9.15045 18.3971 8.52708 18.009 8.11149C17.6209 7.69591 17.0389 7.69591 16.6508 8.11149L11.8 13.2024L6.9493 8.11149C6.56124 7.69591 5.97915 7.69591 5.59109 8.11149C5.39706 8.31928 5.30005 8.52708 5.30005 8.83877C5.30005 9.15045 5.39706 9.35825 5.59109 9.56604L11.0239 15.4881C11.509 15.9037 12.0911 15.9037 12.5762 15.4881C12.4792 15.4881 12.4792 15.4881 12.5762 15.4881Z"
+          fill="#AAAAAA" />
+      </g>
+    </svg>
+  </button>
+  <div class="drop-down__content">
+    <ul class="">
+      <li class="">
+        1
+      </li>
+      <li class="">
+        2
+      </li>
+      <li class="">
+        3
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 2. Срабатывает по нажатию если есть дата атрибут и подключен скрипт  -->
+<div data-drop-down class="drop-down-menu">
+  <button class="drop-down__butten" type="button">
+    Menu
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <g>
+        <path
+          d="M12.5762 15.4881L18.009 9.56604C18.3971 9.15045 18.3971 8.52708 18.009 8.11149C17.6209 7.69591 17.0389 7.69591 16.6508 8.11149L11.8 13.2024L6.9493 8.11149C6.56124 7.69591 5.97915 7.69591 5.59109 8.11149C5.39706 8.31928 5.30005 8.52708 5.30005 8.83877C5.30005 9.15045 5.39706 9.35825 5.59109 9.56604L11.0239 15.4881C11.509 15.9037 12.0911 15.9037 12.5762 15.4881C12.4792 15.4881 12.4792 15.4881 12.5762 15.4881Z"
+          fill="#AAAAAA" />
+      </g>
+    </svg>
+  </button>
+  <div class="drop-down__content">
+    <ul class="">
+      <li class="">
+        1
+      </li>
+      <li class="">
+        2
+      </li>
+      <li class="">
+        3
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- 3 выпадающее многоуровневое меню -->
+<nav class="navigation">
+  <ul class="navigation__items topmenu">
+    <li class="navigation__item">
+
+      <div class="navigation__link-inner">   
+          <a class="navigation__link" href="#">ссылка 1
+      
+      </a>
+      <svg class="navigation__icon navigation__icon_top-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g>
+            <path
+              d="M12.5762 15.4881L18.009 9.56604C18.3971 9.15045 18.3971 8.52708 18.009 8.11149C17.6209 7.69591 17.0389 7.69591 16.6508 8.11149L11.8 13.2024L6.9493 8.11149C6.56124 7.69591 5.97915 7.69591 5.59109 8.11149C5.39706 8.31928 5.30005 8.52708 5.30005 8.83877C5.30005 9.15045 5.39706 9.35825 5.59109 9.56604L11.0239 15.4881C11.509 15.9037 12.0911 15.9037 12.5762 15.4881C12.4792 15.4881 12.4792 15.4881 12.5762 15.4881Z"
+              fill="#AAAAAA" />
+          </g>
+        </svg>
+      </div>
+   
+  
+      <ul class="navigation__items submenu">
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">ссылка 11</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">ссылка 22</a>
+        </li>
+        <li class="navigation__item">
+        <div class="navigation__link-inner">   
+          <a class="navigation__link" href="#">ссылка 1
+      
+      </a>
+      <svg class="navigation__icon navigation__icon_sub-menu" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <g>
+            <path
+              d="M12.5762 15.4881L18.009 9.56604C18.3971 9.15045 18.3971 8.52708 18.009 8.11149C17.6209 7.69591 17.0389 7.69591 16.6508 8.11149L11.8 13.2024L6.9493 8.11149C6.56124 7.69591 5.97915 7.69591 5.59109 8.11149C5.39706 8.31928 5.30005 8.52708 5.30005 8.83877C5.30005 9.15045 5.39706 9.35825 5.59109 9.56604L11.0239 15.4881C11.509 15.9037 12.0911 15.9037 12.5762 15.4881C12.4792 15.4881 12.4792 15.4881 12.5762 15.4881Z"
+              fill="#AAAAAA" />
+          </g>
+        </svg>
+      </div>
+       
+          <ul class="navigation__items submenu">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ссылка 111</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ссылка 222</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ссылка 333</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ссылка 444</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">ссылка 555</a>
+            </li>
+          </ul>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">ссылка 44</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">ссылка 55</a>
+        </li>
+      </ul>
+    </li>
+    <li class="navigation__item">
+      <a class="navigation__link" href="#">ссылка 2</a>
+    </li>
+    <li class="navigation__item">
+      <a class="navigation__link" href="#">ссылка 3</a>
+    </li>
+    <li class="navigation__item">
+      <a class="navigation__link" href="#">ссылка 4</a>
+    </li>
+    <li class="navigation__item">
+      <a class="navigation__link" href="#">ссылка 5</a>
+    </li>
+  </ul>
+</nav>

@@ -1,0 +1,54 @@
+<!-- Модуль «Показать ещё»
+https://legosite.kz/ts/fls/
+Использование функционала
+В элемент с атрибутом data-showmore-content добавляем текст и прочий контент, либо, если это список (UL/OL) элементы списка (LI).
+В зависимости от того, какой контент используется (текст или элементы списка) указываем значение для атрибута data-showmore:
+size — ограничение по высоте блока (по умолчанию)
+items — ограничение количества выводимых элементов списка -->
+
+<!-- для айтемов -->
+<div data-showmore="items" class="block">
+  <ul data-showmore-content="2" class="block__content">
+    <li>Пункт №1</li>
+    <li>Пункт №2</li>
+    <li>Пункт №3</li>
+    <li>Пункт №4</li>
+    <li>Пункт №5</li>
+  </ul>
+  <button hidden data-showmore-button type="button" class="block__more">
+    <span>Показать еще</span>
+    <span>Скыть</span>
+  </button>
+</div>
+
+<!-- для текста -->
+<div data-showmore class="block">
+  <div data-showmore-content="200" class="block__content">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis explicabo
+    voluptates magni culpa, perferendis vel quam consequuntur possimus,
+    vero placeat quo enim obcaecati quas, veritatis magnam non. Architecto,
+    porro voluptatum?
+  </div>
+  <button hidden data-showmore-button type="button" class="block__more">
+    <span>Показать еще</span>
+    <span>Скыть</span>
+  </button>
+</div>
+
+<!-- Включение функционала на определенной ширине экрана
+Для того чтобы использовать функционал на определенной ширине экрана, к объекту с атрибутом data-showmore добавляем атрибут data-showmore-media где, через запятую, указываем нужную ширину, а также тип:
+max (по умолчанию) — функционал включится на ширине меньшей чем указанная
+min — функционал включится на ширине большей чем указанная -->
+
+<div data-showmore data-showmore-media="768,min" class="block">
+  <div data-showmore-content="200" class="block__content">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis explicabo 
+    voluptates magni culpa, perferendis vel quam consequuntur possimus, 
+    vero placeat quo enim obcaecati quas, veritatis magnam non. Architecto, 
+    porro voluptatum?
+  </div>
+  <button hidden data-showmore-button="1000" type="button" class="block__more">
+    <span>Показать еще</span>
+    <span>Скыть</span>
+  </button>
+</div>

@@ -1,0 +1,37 @@
+<!-- Основные возможности
+Использование множества блоков с табами
+Открытие нужного таба по хешу
+Превращение табов в спойлеры на указанной ширине экрана (удобно для адаптива)
+Возможность анимированного открытия табов
+Семантика -->
+
+<div data-tabs class="">
+  <nav data-tabs-titles class="__navigation">
+    <button type="button" class="__title _tab-active">Таб №1</button>
+    <button type="button" class="__title">Таб №2</button>
+    <button type="button" class="__title">Таб №3</button>
+  </nav>
+  <div data-tabs-body class="__content">
+    <div class="__body">
+      Вміст першого таба
+    </div>
+    <div class="__body">
+      Вміст другого таба
+    </div>
+    <div class="__body">
+      Вміст третього таба
+    </div>
+  </div>
+</div>
+
+<!-- Превращение табов в спойлеры -->
+<div data-tabs="768" class="tabs">
+</div>
+
+<!-- Открытие нужного таба по хешу -->
+<div data-tabs data-tabs-hash class="tabs">
+</div>
+
+<!-- Анимация при открытии таба -->
+<div data-tabs data-tabs-animate="1000" class="tabs">
+</div>

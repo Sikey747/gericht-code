@@ -1,0 +1,147 @@
+.header {
+  position: fixed;
+  width: 100%;
+  @include adaptiveValue("padding-top", 40, 20);
+  @include adaptiveValue("padding-bottom", 40, 20);
+  background-color: var(--bg-primary);
+  z-index: 50;
+  line-height: 0.1;
+
+  &__container-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: rem(15);
+	position: relative;
+  }
+
+  
+
+  &__nav {
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: rem(32);
+  }
+
+  &__menu {
+    display: flex;
+
+    & ul {
+      font-weight: 600;
+      letter-spacing: em(0.8);
+      text-transform: capitalize;
+      & li {
+		white-space: nowrap;
+        position: relative;
+        &:first-child::after {
+          position: absolute;
+          content: "";
+          top: rem(-30);
+          right: rem(-15);
+          width: 1px;
+          height: 57px;
+          background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 1) 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  @include adaptiveValue("flex-basis", 297, 198, 0, 1670, 950);
+  cursor: pointer;
+  &:hover path {
+  }
+}
+
+
+//====================================================================================================
+
+ @media (max-width: $tablet) {
+	.header {
+	  
+		&__menu {
+	  
+		  & ul {
+			display: flex;
+			flex-direction: column;
+			& li {
+				&:first-child::after {
+				  top: rem(-82);
+				  right: rem(85);
+				  height: 200px;
+				  transform: rotate(90deg);
+				}
+			  }
+		  }
+		}
+	  }
+
+ }
+
+@media (max-width: $mobile) {
+
+	.header {
+
+		.header-menu-open &__nav{
+			width: 80%;
+			opacity: 1;
+			left: 0;
+		}
+
+		&__nav {
+			position: absolute;
+			left: -100%;
+			top: rem(60);
+			background-color:#b9a044;
+			width: 0;
+			height: 100vh;
+			overflow: auto;
+			opacity: 0;
+			transition: all 0.3s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: rem(40) rem(15) rem(110) rem(15);
+		
+			& ul {
+				flex-direction: column;
+				align-items: start;
+				& li{
+					font-size: rem(25);
+					&:not(:last-child){margin-bottom: rem(20);}
+				}
+			}
+			.header__menu {
+				& ul {
+					& li{
+						font-size: rem(16) ;
+						margin-bottom: rem(0)
+					}
+				 
+		}
+		
+	}}
+	  }
+}
+
+
+ @media (max-width: $mobileSmall) {
+	.header {
+	  
+		&__menu {
+			// display: none;
+		}
+	  }
+
+ }
+ 

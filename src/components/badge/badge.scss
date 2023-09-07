@@ -1,0 +1,14 @@
+.icon-badge {
+  position: absolute;
+  content: "";
+  top: -11px;
+  right: -14px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  z-index: 2;
+  color: var(--text-accent);
+  padding: 4px 8px;
+  font-size: rem(12);
+  font-family: "Quicksand";
+  line-height: 1.2;
+}

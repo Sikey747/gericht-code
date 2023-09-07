@@ -1,0 +1,19 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+// .link-active {
+//   color: var(--primary) !important;
+// }
+
+.bg-filter {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    background: var(--bg-secondary);
+  }
+}

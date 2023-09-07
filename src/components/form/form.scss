@@ -1,0 +1,52 @@
+// form.form-validation {
+//   textarea,
+//   input[type="text"],
+//   input[type="email"],
+//   input[type="password"],
+//   input[type="phone"] {
+//     &:invalid:not(:placeholder-shown) {
+//       border-bottom: rem(2) solid red;
+//     }
+
+//     &:valid:not(:placeholder-shown) {
+//       border-bottom: rem(2) solid green;
+//     }
+//   }
+// }
+
+.validation-element{
+width: 100%;
+}
+
+.required{
+  width: 100%;
+  &_errore{
+    border: 1px solid var(--error);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  &_success{
+    border: 1px solid var(--success);
+    transition: all 0.3s ease-in-out;
+  }
+  .input{
+    position: relative;
+  }
+
+}
+
+.input-info{
+  transform-origin: 0 0;
+  transform: rotateX(-90deg);
+  color: var(--error);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  
+  &_show{
+    position: relative;
+    height: auto;
+    transform: rotateX(-0deg);
+    opacity: 1;
+    }
+  }

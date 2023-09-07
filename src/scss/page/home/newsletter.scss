@@ -1,0 +1,74 @@
+.news-letter {
+    position: relative;
+    z-index: 5;
+    @include adaptiveValue("padding-top", 129, 30);
+    &__container {
+        border: 1px solid rgba(220, 202, 135, 0.20);
+        background: var(--bg-secondary);
+        box-shadow: 22px 30px 95px 1px rgba(0, 0, 0, 0.70);
+        // padding-top: rem(64);
+        // padding-bottom: rem(64);
+        display: flex;
+        flex-direction: column;
+        gap: rem(64);
+        align-items:center;
+        padding: rem(64) rem(15);
+    }
+
+    &__text-block,&__form{
+        max-width: rem(776);
+    }
+
+
+    &__text-block {
+        text-align: center;
+    }
+
+    &__sub-title {
+        @extend %spoon;
+    }
+
+    &__tile {
+        @include adaptiveValue("font-size", 64, 42);
+        margin: rem(0) rem(0) rem(24) rem(0);
+    }
+
+    &__text {
+        color:var(--accent);
+    }
+
+    &__form{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+        align-items:baseline;
+        gap: rem(32);
+        width: 100%;
+    }
+
+    &__input {
+        width: 100%;
+        flex: 0 1 rem(796);
+    }
+    
+    &__button {
+    }
+    
+}
+
+ @media (max-width: $mobileSmall) {
+    .news-letter {
+        &__form{
+            flex-direction: column;
+        }
+    
+        &__input {
+            flex: 0 1 auto;
+        }
+        
+        &__button {
+            width: 100%;
+        }
+        
+    }
+ }

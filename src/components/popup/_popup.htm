@@ -1,0 +1,42 @@
+<!-- каждый попап добавлять отдельно в body
+@@include('html/_popup.htm',{})
+луче каждій попап назівать не попап а конкретно что это окно регистрации и тд
+или уже попап но что она показывает 
+а то попапов может быть много и будет путониться
+дальше добавить попа на нужный элемент обычно это кнопка
+и указать id нужного попапа зарание подключенного -->
+
+<!-- Для того, чтобы вызвать попап, необходимо на странице ввести объект с дата-атрибутом,
+   в котором указан селектор (класс или id) всплывающего окна, на которое ссылаемся: -->
+<button href="#" data-popup="#popup" class="">Я открываю попап</button>
+
+<!-- popap standart -->
+<div id="popup" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">&#10005</button>
+      <div class="popup__text">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- popap btn to open youtube video -->
+<button type="button"  class="" data-popup="#video" data-popup-youtube="uc8Rv4TBUc8" ></button>
+
+<!-- popap youtube video -->
+					<div id="video" aria-hidden="true" class="popup">
+						<div class="popup__wrapper">
+							<div class="popup__content">
+								<button data-close type="button" class="popup__close">&#10005</button>
+								<div data-youtube-place class="popup__text">
+					
+								</div>
+							</div>
+						</div>
+					</div>
+
+  <!-- Открытие попапа по хешу
+  Для того чтобы открыть попап при открытии страницы, добавляем к адресу хеш с именем селектора попапа -->
+  <!-- https://template.fls.guru/index.html#popup -->

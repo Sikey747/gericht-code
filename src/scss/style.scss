@@ -1,0 +1,59 @@
+@use "sass:math";
+
+@import "base/mixins";
+//@import "fonts/fonts";
+//@import "fonts/icons";
+@import "base/var";
+@import "base/null";
+@import "base/typography";
+@import "base";
+@import "common";
+@import "base/animation";
+
+//UI/UX Components
+@import "/src/components/swiper/swiper";
+@import "/src/components/menu-icon/menu-icon";
+@import "/src/components/input_text-area/input_text-area";
+@import "/src/components/button/button";
+@import "/src/components/select_ux/select_ux";
+@import "/src/components/datepicker/datepicker";
+@import "/src/components/overlay/overlay";
+@import "/src/components/rippleEffect/rippleEffect";
+@import "/src/components/accordion_spollers/accordion_spollers";
+@import "/src/components/popup/popup";
+@import "/src/components/form/form";
+@import './../components/scroll-function/scroll-function';
+// @import "/src/components/toggle/toggle";
+// @import "/src/components/search//search";
+// @import "/src/components/checkbox/checkbox";
+// @import "/src/components/radio/radio";
+// @import "/src/components/select/select";
+// @import "/src/components/star_rating/star_rating";
+// @import "/src/components/quantity/quantity";
+// @import "/src/components/range/range";
+// @import "/src/components/snackbar/snackbar";
+// @import "/src/components/countdown/countdown";
+// @import "/src/components/tab/tab";
+// @import "/src/components/showmore/showmore";
+// @import "/src/components/select-max/select-max";
+// @import "/src/components/pagination/pagination";
+// @import "/src/components/breadcrumb/breadcrumb";
+// @import "/src/components/castomScroll//castomScroll";
+// @import "/src/components/drop-down-menu/drop-down-menu";
+// @import "/src/components/header/header";
+// @import "/src/components/time-picker/time-picker";
+// @import "/src/components/progress-bar/progress-bar";
+// @import "/src/components/sticky/sticky";
+// @import "/src/components/custom-сursor/custom-сursor";
+// @import "/src/components/file/file";
+
+
+// Підключення стилів окремих блоків
+@import "header";
+@import "footer";
+
+// Підключення стилів окремих сторінок
+@import "home";
+
+
+

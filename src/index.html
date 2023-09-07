@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html  lang="en">
+	@@include('html/_head.htm',{
+	"title":"HomePage"
+	})
+	<body>
+		<div  class="wrapper">
+			@@include('html/_header.htm',{})
+			<main class="page">
+				@@include('html/page/home/_action.htm')
+				@@include('html/page/home/_more_info.htm')
+				@@include('html/page/home/_book.htm')
+				@@include('html/page/home/_all_menu.htm')
+				@@include('html/page/home/_today_manu.htm')
+				@@include('html/page/home/_chef_word.htm')
+				@@include('html/page/home/_testimony.htm')
+				@@include('html/page/home/_video.htm')
+				@@include('html/page/home/_awards.htm')
+				@@include('html/page/home/_blogs.htm')
+				@@include('html/page/home/_instagram.htm')
+				@@include('html/page/home/_news-letter.htm')
+			</main>
+			@@include('html/_footer.htm',{})
+		</div>
+		
+		@@include('html/components/_overlay.htm',{})
+		<!-- @@include('html/components/_snackbar.htm',{}) -->
+		@@include('html/_popup.htm',{})
+		@@include('html/_js.htm',{})
+	</body>
+</html>
