@@ -15,87 +15,87 @@ $startDelay: 0.3s;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-@keyframes fade-in-left {
-  0% {
-    -webkit-transform: translateX(-50px);
-    transform: translateX(-50px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+// @keyframes fade-in-left {
+//   0% {
+//     -webkit-transform: translateX(-50px);
+//     transform: translateX(-50px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: translateX(0);
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
 
 // animation: fade-in-left 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-@keyframes fade-in-right {
-  0% {
-    transform: translateX(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
+// @keyframes fade-in-right {
+//   0% {
+//     transform: translateX(50px);
+//     opacity: 0;
+//   }
+//   100% {
+//     transform: translateX(0);
+//     opacity: 1;
+//   }
+// }
 
 // animation: slide-bottom 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) 1s infinite alternate forwards;
-@keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
-  }
-}
+// @keyframes slide-bottom {
+//   0% {
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//   }
+//   100% {
+//     -webkit-transform: translateY(50px);
+//     transform: translateY(50px);
+//   }
+// }
 
 // animation: tracking-in-expand-fwd 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s both;
-@keyframes tracking-in-expand-fwd {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-transform: translateZ(-200px);
-    transform: translateZ(-200px);
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.6;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
+// @keyframes tracking-in-expand-fwd {
+//   0% {
+//     letter-spacing: -0.5em;
+//     -webkit-transform: translateZ(-200px);
+//     transform: translateZ(-200px);
+//     opacity: 0;
+//   }
+//   40% {
+//     opacity: 0.6;
+//   }
+//   100% {
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//     opacity: 1;
+//   }
+// }
 
 // animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-@keyframes slide-in-bottom {
-  0% {
-    -webkit-transform: translateY(200px);
-    transform: translateY(200px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
+// @keyframes slide-in-bottom {
+//   0% {
+//     -webkit-transform: translateY(200px);
+//     transform: translateY(200px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// }
 // zOOM IN animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-@keyframes slide-in-fwd-center {
-  0% {
-    -webkit-transform: translateZ(-1400px);
-    transform: translateZ(-1400px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
+// @keyframes slide-in-fwd-center {
+//   0% {
+//     -webkit-transform: translateZ(-1400px);
+//     transform: translateZ(-1400px);
+//     opacity: 0;
+//   }
+//   100% {
+//     -webkit-transform: translateZ(0);
+//     transform: translateZ(0);
+//     opacity: 1;
+//   }
+// }
 
 // ################################################
 //      Анимация круга или кругом для нажатия
@@ -155,19 +155,19 @@ $startDelay: 0.3s;
 //https://10015.io/tools/css-loader-generator тут разные спинеры
 //как я понял просто добавляешь класс спинер туда где нужна загрузка а когда загурзка заканчиваеться то убиарешь класс
 
-.spinner {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  background:
-    radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px no-repeat,
-    conic-gradient(#0000 30%, #474bff);
-  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
-  animation: spinner-c7wet2 1s infinite linear;
-}
+// .spinner {
+//   width: 56px;
+//   height: 56px;
+//   border-radius: 50%;
+//   background:
+//     radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px no-repeat,
+//     conic-gradient(#0000 30%, #474bff);
+//   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+//   animation: spinner-c7wet2 1s infinite linear;
+// }
 
-@keyframes spinner-c7wet2 {
-  100% {
-    transform: rotate(1turn);
-  }
-}
+// @keyframes spinner-c7wet2 {
+//   100% {
+//     transform: rotate(1turn);
+//   }
+// }

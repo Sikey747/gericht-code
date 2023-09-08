@@ -79,6 +79,7 @@
   &__link {
     font-family: 'Cormorant Upright', serif;
     color: var(--primary);
+    width: fit-content;
     transition: all 0.3s ease-in-out;
     &:hover {
       color: var(--secondary);

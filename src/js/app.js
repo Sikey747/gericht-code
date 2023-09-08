@@ -1,5 +1,5 @@
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true;
+window['FLS'] = false;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
@@ -18,23 +18,23 @@ flsFunctions.addTouchClass();
 // flsFunctions.addLoadedClass();
 /* Враховування плаваючої панелі на мобільних пристроях при 100vh */
 // и для полноценнго блока 100vh у первого блока с учетом шапки
-flsFunctions.fullVHfix();
+// flsFunctions.fullVHfix();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 //Фикс для актуальной высоты шапки и что бы она всегда была выше контента
 flsFunctions.headerHeigh();
 
 //Ui-ux components
+import swiper from "./../components/swiper/swiper.js";
 import selectUx from "/src/components/select_ux/select_ux.js";
 import datapicer from "/src/components/datepicker/datepicker.js";
 import overlay from './../components/overlay/overlay.js';
 import popup from "/src/components/popup/popup.js";
 import tab from "/src/components/tab/tab.js";
-import swiper from "./../components/swiper/swiper.js";
 import dynamicAdapt from './../components/dynamic_adapt/dynamic_adapt.js';
 import form from './../components/form/form.js';
+import lazyLoad from './../components/lazyload/lazyload.js';
 // import radio from "/src/components/radio/radio.js";
-// import lazyLoad from './../components/lazyload/lazyload.js';
 // import menuIcon from './../components/menu-icon/menu-icon.js';
 // import menurippleEffect from './../components/rippleEffect/rippleEffect.js';
 // import sticky from "/src/components/sticky/sticky.js";

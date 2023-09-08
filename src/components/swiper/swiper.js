@@ -148,11 +148,11 @@ function initSliders() {
 			// fadeEffect: {
 			// 	 crossFade: true
 			// },
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-				pauseOnMouseEnter: true
-			},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
+			// 	pauseOnMouseEnter: true
+			// },
 		
 
 

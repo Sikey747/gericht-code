@@ -14,8 +14,6 @@
         content:'';
         bottom: 26px;
         left:  -31px;
-        // width: 100%;
-        // height: 100%;
         z-index: 10;
          @media (max-width: 1500px) {
             bottom: -80px;
@@ -81,22 +79,19 @@
     }
 }
 
-
-.mouse{
-    .inst-photo:hover .inst-photo__overlay{
-            bottom: 0;
-            opacity: 1;
-            visibility: visible;
-        
-    }
-}
-
-
-.tuch {
-    .inst-photo__overlay_show{
+@media  (any-hover: none){
+    .inst-photo__overlay.inst-photo__overlay_show{
         bottom: 0;
         opacity: 1;
         visibility: visible;
+    }
+}
+
+@media (any-hover: hover){
+.inst-photo:hover .inst-photo__overlay{
+    bottom: 0;
+    opacity: 1;
+    visibility: visible;
     }
 }
 

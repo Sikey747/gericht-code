@@ -6,6 +6,8 @@ import 'air-datepicker/air-datepicker.css';
 let dp = new AirDatepicker('#calendar', {
     selectedDates: [new Date()],
     position: 'bottom center',
+    isMobile:true,
+    toggleSelected:false,
     locale:{
         days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],

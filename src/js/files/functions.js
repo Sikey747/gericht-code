@@ -354,13 +354,9 @@ export function headerHeigh(){
     function getHeaderHeight() {
 		const headerHeight = header.clientHeight;
 	 	page.style.marginTop =  `${headerHeight}px`;
-
-
 		if(page.firstElementChild){
-
-
 		if(page.firstElementChild.hasAttribute("data-fullscreen")){
-			page.firstElementChild.style.height = `calc(100vh - ${headerHeight}px)`
+			page.firstElementChild.style.height = `calc(100dvh - ${headerHeight}px)`
 		}										  
 	}
     }  
